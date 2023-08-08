@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">summer_school_surf</string>
+    <string name="my_cocktails">My cocktails</string>
+    <string name="add_cocktail">Add your first cocktail here</string>
+    <string name="my_cocktails_title">My cocktails</string>
+    <string name="title">Title</string>
+    <string name="cocktail_name_enter_field">Cocktail name</string>
+    <string name="add_title">Add title</string>
+    <string name="optional_field">Optional field</string>
+    <string name="description">Description</string>
+    <string name="description_tittle">To make this homemade</string>
+    <string name="recipe_title">Simply combine all the ingredients</string>
+    <string name="recipe">Recipe</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_ingredient">Add ingredient</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="ingredient_name">Ingredient\'s name</string>
+    <string name="add">Add</string>
+    <string name="must_be_not_empty">Field must be not empty</string>
+    <string name="add_your_first_cocktail">Add your first cocktail</string>
+</resources>

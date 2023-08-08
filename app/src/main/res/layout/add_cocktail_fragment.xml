@@ -1,0 +1,227 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.cocktail.AddCocktailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rectangle_17"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/photo" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintBottom_toTopOf="@id/button_save">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cocktail_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="@string/title"
+                app:boxCornerRadiusBottomEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusBottomStart="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopStart="@dimen/boxCornersSmallField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:placeholderText="Placeholder Text"
+                tools:layout_editor_absoluteY="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cocktail_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="@string/cocktail_name_enter_field" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_title"
+                android:fontFamily="@font/didact_gothic"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description_cocktail_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:hint="@string/description"
+                app:boxCornerRadiusBottomEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusBottomStart="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopStart="@dimen/boxCornersSmallField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:placeholderText="Placeholder Text"
+                tools:layout_editor_absoluteY="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_cocktail_enter_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="@string/description_tittle"
+                    android:inputType="textMultiLine"
+                    android:lines="7"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/optional_field"
+                android:fontFamily="@font/didact_gothic"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group"
+                    style="@style/Widget.MaterialComponents.Chip.Entry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:chipSpacing="25dp">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <ImageView
+                    android:id="@+id/btn_add_ingredient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_ingredient" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipe_cocktail_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:hint="@string/recipe"
+                app:boxCornerRadiusBottomEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusBottomStart="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopEnd="@dimen/boxCornersSmallField"
+                app:boxCornerRadiusTopStart="@dimen/boxCornersSmallField"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:placeholderText="Placeholder Text"
+                tools:layout_editor_absoluteY="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/recipe_cocktail_enter_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="@string/recipe_title"
+                    android:inputType="textMultiLine"
+                    android:lines="7"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/optional_field"
+                android:fontFamily="@font/didact_gothic"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save"
+            style="@style/NotCapsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_button_save"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/button_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_cancel"
+            style="@style/NotCapsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rectangle_button_cancel"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/cancel"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_save" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

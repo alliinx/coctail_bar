@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cocktail"
+            type="com.example.summer_school_surf.domain.model.Cocktail" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cocktail_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="55dp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_margin="20dp"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:id="@+id/image_cocktail_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/pink_cocktail" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:background="@drawable/rectangle_gradient">
+
+                <TextView
+                    android:id="@+id/text_cocktail_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/didact_gothic"
+                    android:textColor="@color/white"
+                    tools:text="Pink cocktail" />
+
+            </FrameLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+</layout>

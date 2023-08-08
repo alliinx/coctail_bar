@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_ingredient"
+        android:fontFamily="@font/didact_gothic"
+        android:textSize="36sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cocktail_ingredient_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/ingredient"
+        app:boxCornerRadiusBottomEnd="@dimen/boxCornersSmallField"
+        app:boxCornerRadiusBottomStart="@dimen/boxCornersSmallField"
+        app:boxCornerRadiusTopEnd="@dimen/boxCornersSmallField"
+        app:boxCornerRadiusTopStart="@dimen/boxCornersSmallField"
+        app:placeholderText="Placeholder Text"
+        tools:layout_editor_absoluteY="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cocktail_ingredient_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/ingredient_name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_title"
+        android:fontFamily="@font/didact_gothic"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_save"
+        style="@style/NotCapsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_button_save"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/add"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cancel"
+        style="@style/NotCapsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_button_cancel"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/cancel"
+        android:textColor="@color/blue"/>
+</LinearLayout>
